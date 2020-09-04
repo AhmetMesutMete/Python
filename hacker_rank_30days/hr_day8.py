@@ -31,11 +31,10 @@
 # harry=12299933
 n = int(input())
 for i in range(n):
-    phin = str.split(input())
-    name = phin[0]
-    pnumber = phin[1]
+    phbook = {}
+    name, phnum = str.split(input())
     phbook.update({
-        (name, pnumber)
+        (name, phnum)
     })
 for i in range(n):
     sname = str(input())
