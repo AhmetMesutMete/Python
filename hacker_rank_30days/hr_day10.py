@@ -27,10 +27,8 @@ def dec_to_bin(n):
         n = int(n / 2)
     return result
 a = dec_to_bin(n).split('0')
-arr = []
-for i in a:
-    arr.append(len(i))
-arr.sort()
-print(arr[-1])
+b = [len(a[i]) for i in range(len(a))]
+b.sort()
+print(b[-1])
 
 
