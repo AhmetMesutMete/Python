@@ -3,8 +3,6 @@
 # First line denotes the number of test cases
 
 # Each of the following line contains an integer, N. 
-
-import sys
       
 t = int(input('Please indicate the number of test cases: ').strip())
 for _ in range(t):

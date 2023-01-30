@@ -1,5 +1,3 @@
-import sys
-
 '''
 Print the sum of even fibonacci numbers below given number
 '''
