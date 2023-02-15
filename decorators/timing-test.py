@@ -7,7 +7,7 @@ def timing_test(count):
         def wrapper(*args, **kwargs):
             for _ in range(count):
                 start_time = perf_counter()
-                func()
+                func(*args, **kwargs)
                 end_time = perf_counter()
                 run_times.append(end_time-start_time)
             return sum(run_times)/len(run_times)
@@ -21,4 +21,12 @@ def do_sth():
     for i in range(1000):
         start += i
 
+@timing_test(1000)
+def do_sth2(val):
+    cnt = 0
+    for _ in range(val):
+        cnt += 1
+
+
 print(do_sth())
+print(do_sth2(100))
