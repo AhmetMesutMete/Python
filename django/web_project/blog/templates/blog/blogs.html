@@ -11,9 +11,13 @@
         <div class="col-9">
             <h1>Blogs</h1>
             <hr>
-            {% for blog in blogs %}
-                {% include 'blog/partials/_blog.html' %}
-            {% endfor %}
+            {% if blogs|length > 0 %}
+                {% for blog in blogs %}
+                    {% include 'blog/partials/_blog.html' %}
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-warning">No blogs</div>
+            {% endif %}
         </div>
     </div>
 </div>
