@@ -21,7 +21,7 @@ class Blog(models.Model):
     is_active = models.BooleanField()
     is_home = models.BooleanField()
     description = RichTextField()
-    categories = models.ManyToManyField(Category)
+    categories = models.ManyToManyField(Category, blank=True)
     '''
         At first I had some values inside of the table so first set
         the parameters in a way that accepts rows that doesn't have a value for
